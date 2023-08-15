@@ -1,11 +1,13 @@
 import React from "react";
-import '../../styles/whatsHot.css';
+import "../../styles/whatsHot.css";
 
-const WhatsHot = () => {
+const WhatsHot = ({ id }) => {
   return (
-    <div className="label">
-      <p className="what-s-hot-for-this"> What’s hot for this week </p>
-    </div>
+    <section id={id}>
+      <div className="label">
+        <p className="what-s-hot-for-this"> What’s hot for this week </p>
+      </div>
+    </section>
   );
 };
 

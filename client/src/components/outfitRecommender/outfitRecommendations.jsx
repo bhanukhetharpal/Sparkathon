@@ -3,7 +3,8 @@ import fetchApiData from "../../api/outfitRecommender";
 import LinkComponent from "./linkComponent";
 import "../../styles/outfitRecommenderStyle.css";
 import BarcodeScanner from "./barcodeScanner";
-const OutfitRecommenderButton = () => {
+
+const OutfitRecommenderButton = ({ id }) => {
   const [apiData, setApiData] = useState(null);
   const [query, setQuery] = useState("");
   const [receivedBarcode, setReceivedBarcode] = useState(null);
@@ -29,25 +30,26 @@ const OutfitRecommenderButton = () => {
   };
 
   return (
-    <div>
-      <div className="label">
-        <div className="outfitHeading">OUTFIT RECOMMENDATIONS</div>
-        <p className="just-scan-the">
-          JUST SCAN THE BARCODE ON THE PRODUCT, AND SEE HOW YOU CAN STYLE IT!
-        </p>
+    <section id={id}>
+      <div>
+        <div className="label">
+          <div className="outfitHeading">OUTFIT RECOMMENDATIONS</div>
+          <p className="just-scan-the">
+            JUST SCAN THE BARCODE ON THE PRODUCT, AND SEE HOW YOU CAN STYLE IT!
+          </p>
+        </div>
+        <div id="reader" width="600px">
+          <BarcodeScanner onScan={handleScan} />
+        </div>
+        {/* render all the pinterest links */}
+        <div className="link-container">
+          {apiData &&
+            apiData.map((item, index) => (
+              <LinkComponent key={index} pinterestLink={item.link} />
+            ))}
+        </div>
       </div>
-      <div id="reader" width="600px">
-        <BarcodeScanner onScan={handleScan} />
-      </div>
-
-      {/* render all the pinterest links */}
-      <div className="link-container">
-        {apiData &&
-          apiData.map((item, index) => (
-            <LinkComponent key={index} pinterestLink={item.link} />
-          ))}
-      </div>
-    </div>
+    </section>
   );
 };
 

@@ -12,7 +12,25 @@
     height: 50px;
 }
 
-.store-experience {
+.navigation {
     font-size: 18px;
-    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    padding: 10px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
 }

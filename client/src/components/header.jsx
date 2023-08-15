@@ -8,6 +8,22 @@ const Header = () => {
       <div className="logo-container">
         <img src={logo} alt="Logo" className="logo" />
       </div>
+      <nav className="navigation">
+        <ul className="nav-list">
+          <li className="nav-item">
+            <a href="#title">Home</a>
+          </li>
+          <li className="nav-item">
+            <a href="#whats-hot">What's Hot</a>
+          </li>
+          <li className="nav-item">
+            <a href="#know-your-size">Know Your Size</a>
+          </li>
+          <li className="nav-item">
+            <a href="#outfit-recommender">Outfit Recommender</a>
+          </li>
+        </ul>
+      </nav>
       <div className="store-experience">Walmart-In store experience</div>
     </header>
   );

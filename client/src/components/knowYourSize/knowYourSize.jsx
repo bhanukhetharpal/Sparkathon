@@ -1,11 +1,13 @@
 import React from "react";
 import "../../styles/knowYourSize.css";
 
-const KnowYourSize = () => {
+const KnowYourSize = ({ id }) => {
   return (
-    <div className="label">
-      <div className="know-your-size"> Know Your Size </div>
-    </div>
+    <section>
+      <div className="label">
+        <div className="know-your-size"> Know Your Size </div>
+      </div>
+    </section>
   );
 };
 
