@@ -1,5 +1,4 @@
 import React from 'react';
-import MyButton from './components/sizeRecommender/button.js'
 import OutfitRecommenderButton from './components/outfitRecommender/outfitRecommendations.jsx';
 function App() {
   return (
@@ -10,7 +9,6 @@ function App() {
       <body>
       <OutfitRecommenderButton />
       </body>
-      
     </div>
   );
 }
