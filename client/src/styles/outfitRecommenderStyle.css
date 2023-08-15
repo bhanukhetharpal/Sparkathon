@@ -1,5 +1,7 @@
 .label {
   border: 0px none;
+  display: flex;
+  flex-direction: column;
 }
 
 .label .outfitHeading {
@@ -25,7 +27,6 @@
   line-height: normal;
   text-align: center;
   top: 0;
-  white-space: nowrap;
 }
 .link-container {
   display: grid;

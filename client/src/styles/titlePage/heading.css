@@ -10,13 +10,13 @@
   font-family: "Actor-Regular", Helvetica;
   font-size: 94px;
   font-weight: 400;
-  height: 327px;
+  height: 307px;
   left: 0;
   letter-spacing: 4.7px;
   line-height: normal;
   top: 0;
   text-transform: uppercase;
-  width: 651px;
+  width: auto;
 }
 
 .label .We {
@@ -33,7 +33,6 @@
 font-size: 84px;
 letter-spacing: 4.2px;
 }
-
 .label .collection {
   color: #de6a2a;
 }

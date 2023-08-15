@@ -1,6 +1,7 @@
 .label {
     border: 0px none;
     margin-left: 93px ;
+    display: flex;
 }
 
 .label .discover-a {
@@ -12,5 +13,5 @@
     letter-spacing: 0;
     line-height: 24px;
     top: 0;
-    width: 490px;
+    width: auto;
 }

@@ -3,6 +3,7 @@ import "../../styles/titlePage/footer.css";
 
 const Footer = () => {
   return (
+    <div className="footer-container">    
     <div className="frame">
       <p className="div">
         <span className="text-wrapper">
@@ -25,6 +26,7 @@ const Footer = () => {
         </span>
         <span className="span">Stores</span>
       </p>
+    </div>
     </div>
   );
 };

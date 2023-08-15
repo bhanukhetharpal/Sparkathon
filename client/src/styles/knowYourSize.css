@@ -1,5 +1,7 @@
 .label {
     border: 0px none;
+    display: flex;
+    flex-direction: column;
 }
 
 .label .know-your-size {

@@ -1,5 +1,4 @@
 import React from "react";
-import MyButton from "./components/sizeRecommender/button.js";
 import OutfitRecommenderButton from "./components/outfitRecommender/outfitRecommendations.jsx";
 import Header from "./components/header.jsx";
 import TitlePage from "./components/titlePage/titlePage.jsx";
