@@ -16,9 +16,28 @@ router.post('/populate', async (req, res) => {
     ];
     
     try {
-        await WomenSizeChart.deleteMany({}); 
-        await WomenSizeChart.insertMany(sizes);  
+        await WomenSizeChart.deleteMany({});
+        await WomenSizeChart.insertMany(sizes);
         res.json({ message: 'Women size chart populated' });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+router.post('/predict', async (req, res) => {
+    const { bust, waist, hip } = req.body;
+
+    try {
+        const sizes = await WomenSizeChart.find().sort({ bust: 1, waist: 1, hip: 1 });
+        const matchedSize = sizes.find(size => 
+            size.bust >= bust && size.waist >= waist && size.hip >= hip
+        );
+
+        if (matchedSize) {
+            res.json({ size: matchedSize.size });
+        } else {
+            res.json({ size: 'Size not found' });
+        }
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

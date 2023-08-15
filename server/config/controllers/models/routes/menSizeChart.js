@@ -15,9 +15,29 @@ router.post('/populate', async (req, res) => {
     ];
     
     try {
-        await MenSizeChart.deleteMany({});  
-        await MenSizeChart.insertMany(sizes);  
+        await MenSizeChart.deleteMany({});
+        await MenSizeChart.insertMany(sizes);
         res.json({ message: 'Men size chart populated' });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+router.post('/predict', async (req, res) => {
+    const { chest, waist, neck, sleeve } = req.body;
+
+    try {
+        const sizes = await MenSizeChart.find().sort({ chest: 1, waist: 1, neck: 1, sleeve: 1 });
+        const matchedSize = sizes.find(size => 
+            size.chest >= chest && size.waist >= waist && 
+            size.neck >= neck && size.sleeve >= sleeve
+        );
+
+        if (matchedSize) {
+            res.json({ size: matchedSize.size });
+        } else {
+            res.json({ size: 'Size not found' });
+        }
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
