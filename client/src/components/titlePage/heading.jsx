@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/heading.css";
+import "../../styles/titlePage/heading.css";
 
 const Heading = () => {
   return (
