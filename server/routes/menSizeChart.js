@@ -3,6 +3,7 @@ const router = express.Router();
 const MenSizeChart = require('../models/MenSizeChart');
 
 router.post('/populate', async (req, res) => {
+    console.log("Attempting to populate Men's Size Chart...");
     const sizes = [
         { size: 'S', chest: 36, waist: 30, neck: 14.75, sleeve: 32.25 },
         { size: 'M', chest: 40, waist: 34, neck: 15.75, sleeve: 33 },

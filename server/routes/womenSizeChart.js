@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const WomenSizeChart = require('../models/WomenSizeChart');
+const WomenSizeChart = require('../models/WomenSize');
+
 
 router.post('/populate', async (req, res) => {
+    console.log("Attempting to populate Women's Size Chart...");
     const sizes = [
         { size: '1X', USA_size: '16W', bust: 42.5, waist: 34.5, hip: 44.5 },
         { size: '2X', USA_size: '18W', bust: 44.5, waist: 36.5, hip: 46.5 },

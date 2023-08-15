@@ -14,7 +14,7 @@ const menSizeChartRoutes = require('./routes/menSizeChart');
 app.use('/api/women-size-chart', womenSizeChartRoutes);
 app.use('/api/men-size-chart', menSizeChartRoutes);
 
-// 3. MongoDB Atlas connection
+
 const dbURI = 'mongodb+srv://abhishree07:asadzoya11@cluster0.5fkumsj.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
