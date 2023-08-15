@@ -1,0 +1,16 @@
+.label {
+    border: 0px none;
+}
+
+.label .know-your-size {
+    color: #0a0a0a;
+    font-family: "Actor-Regular", Helvetica;
+    font-size: 58px;
+    font-weight: 400;
+    height: 70px;
+    left: 0;
+    letter-spacing: 2.9px;
+    line-height: normal;
+    text-align: center;
+    top: 0;
+}

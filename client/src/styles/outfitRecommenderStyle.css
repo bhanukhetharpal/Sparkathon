@@ -1,37 +1,36 @@
 .label {
-    border: 0px none;
+  border: 0px none;
 }
 
 .label .outfitHeading {
-    color: #0a0a0a;
-    font-family: "Actor-Regular", Helvetica;
-    font-size: 58px;
-    font-weight: 400;
-    height: 70px;
-    left: 0;
-    letter-spacing: 2.9px;
-    line-height: normal;
-    text-align: center;
-    top: 0;
+  color: #0a0a0a;
+  text-align: center;
+  font-family: "Actor-Regular",Helvetica;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.9px;
+  text-transform: uppercase;
 }
 
 .label .just-scan-the {
-    color: #0a0a0a;
-    font-family: "Actor-Regular", Helvetica;
-    font-size: 22px;
-    font-weight: 400;
-    height: 26px;
-    left: 0;
-    letter-spacing: 1.1px;
-    line-height: normal;
-    text-align: center;
-    top: 0;
-    white-space: nowrap;
+  color: #0a0a0a;
+  font-family: "Actor-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 26px;
+  left: 0;
+  letter-spacing: 1.1px;
+  line-height: normal;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
 }
 .link-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Adjust as needed */
-    gap: 10px;
-    /* Adjust the gap between items */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Adjust as needed */
+  gap: 10px;
+  /* Adjust the gap between items */
 }

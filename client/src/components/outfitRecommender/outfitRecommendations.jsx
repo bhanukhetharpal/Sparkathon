@@ -33,8 +33,7 @@ const OutfitRecommenderButton = () => {
       <div className="label">
         <div className="outfitHeading">OUTFIT RECOMMENDATIONS</div>
         <p className="just-scan-the">
-          JUST SCAN THE BARCODE ON THE PRODUCT, AND SEE WHAT WOULD GO BEST WITH
-          IT!
+          JUST SCAN THE BARCODE ON THE PRODUCT, AND SEE HOW YOU CAN STYLE IT!
         </p>
       </div>
       <div id="reader" width="600px">

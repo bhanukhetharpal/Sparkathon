@@ -1,0 +1,39 @@
+.label {
+  border: 0px none;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.label .WE-have-diverse {
+  color: transparent;
+  font-family: "Actor-Regular", Helvetica;
+  font-size: 94px;
+  font-weight: 400;
+  height: 327px;
+  left: 0;
+  letter-spacing: 4.7px;
+  line-height: normal;
+  top: 0;
+  text-transform: uppercase;
+  width: 651px;
+}
+
+.label .We {
+  color: #000;
+}
+
+.label .have {
+  color: #000;
+  font-size: 64px;
+  letter-spacing: 3.2px;
+}
+
+.label .space {
+font-size: 84px;
+letter-spacing: 4.2px;
+}
+
+.label .collection {
+  color: #de6a2a;
+}
