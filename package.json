@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A walmart Sparkathon project",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "start": "node -r esm your-entry-file.js",
+    "start": "node -r esm client/public/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "AAB coders",
