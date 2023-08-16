@@ -1,0 +1,27 @@
+.title-page-container {
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+}
+
+.title-content {
+    flex: 1;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-image {
+    flex: 1;
+    display: flex;
+    position: relative;
+    z-index: 0;
+}
+
+.title-image img {
+    display: flex;
+    max-width: 100%;
+    height: 100%;
+}

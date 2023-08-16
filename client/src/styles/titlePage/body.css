@@ -1,0 +1,17 @@
+.label {
+    border: 0px none;
+    margin-left: 93px ;
+    display: flex;
+}
+
+.label .discover-a {
+    color: #0a0a0abf;
+    font-family: "Actor-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 24px;
+    top: 0;
+    width: auto;
+}

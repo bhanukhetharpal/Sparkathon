@@ -1,10 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors')
 require('dotenv').config();
 console.log(process.env.DB_URI);
 const app = express();
 
 app.use(express.json());
+// Allow requests from a specific origin (your frontend domain)
+app.use(cors({
+  origin: 'http://localhost:3000',
+}));
 
 const womenSizeChartRoutes = require('./routes/womenSizeChart');
 const menSizeChartRoutes = require('./routes/menSizeChart');
@@ -15,7 +20,7 @@ app.use('/api/men-size-chart', menSizeChartRoutes);
 app.use('/api/products', productRoutes);  
 
 
-const dbURI ='mongodb+srv://abhishree07:asadzoya11@cluster0.5fkumsj.mongodb.net/?retryWrites=true&w=majority'; 
+const dbURI = 'mongodb+srv://bhanu123:test123@cluster0.5fkumsj.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB Atlas'))
