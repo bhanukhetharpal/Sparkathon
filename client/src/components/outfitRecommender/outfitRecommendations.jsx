@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import fetchApiData from "../../api/outfitRecommender";
 import LinkComponent from "./linkComponent";
 import "../../styles/outfitRecommenderStyle.css";
-import BarcodeScanner from "./barcodeScanner";
+import BarcodeButton from "./barcodeButton";
 
 const OutfitRecommenderButton = ({ id }) => {
   const [apiData, setApiData] = useState(null);
-  const [query, setQuery] = useState("");
   const [receivedBarcode, setReceivedBarcode] = useState(null);
   useEffect(() => {
     // Handle fetching data based on receivedBarcode here
@@ -38,9 +37,7 @@ const OutfitRecommenderButton = ({ id }) => {
             JUST SCAN THE BARCODE ON THE PRODUCT, AND SEE HOW YOU CAN STYLE IT!
           </p>
         </div>
-        <div id="reader" width="600px">
-          <BarcodeScanner onScan={handleScan} />
-        </div>
+        <BarcodeButton onScan={handleScan}/>
         {/* render all the pinterest links */}
         <div className="link-container">
           {apiData &&

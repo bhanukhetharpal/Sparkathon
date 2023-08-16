@@ -23,7 +23,7 @@ const Header = () => {
             <a href="#outfit-recommender">Outfit Recommender</a>
           </li>
           <li className="nav-item">
-            <a href="#size-availibilty">Check Size Availabilty</a>
+            <a href="#size-availabilty">Check Size Availabilty</a>
           </li>
         </ul>
       </nav>
