@@ -27,7 +27,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <div className="store-experience">Walmart-In store experience</div>
+      <div className="store-experience">Redefining Retail: The Fitting Room Revolution!</div>
     </header>
   );
 };

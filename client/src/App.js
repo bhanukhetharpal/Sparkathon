@@ -33,7 +33,7 @@ import TitlePage from "./components/titlePage/titlePage.jsx";
 import KnowYourSize from "./components/knowYourSize/knowYourSize.jsx";
 import WhatsHot from "./components/whatsHot/whatsHot.jsx";
 import SizeAvailabilty from "./components/sizeAvailability/sizeAvailabilty.jsx";
-import Footer from "./components/Footer.jsx"; // Import the Footer component
+import Footer from "./components/Footer.jsx"; 
 
 import "./App.css"; // Import your main CSS file
 
