@@ -1,7 +1,14 @@
+#know-your-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
 .label {
     border: 0px none;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .label .know-your-size {
@@ -16,19 +23,20 @@
     text-align: center;
     top: 0;
     text-transform: uppercase;
+    position: relative;
+    margin-right: 30px;
+    
 }
 /* knowYourSize.css */
 
-#know-your-size {
-    background-color: #f0f0f0;
+.sectionStyle {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 20px;
-}
-
-.label {
-    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .know-your-size {
@@ -65,7 +73,7 @@ select {
 button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #FF914D;
     color: white;
     border: none;
     border-radius: 4px;
@@ -73,7 +81,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #e38526;
 }
 
 p {
