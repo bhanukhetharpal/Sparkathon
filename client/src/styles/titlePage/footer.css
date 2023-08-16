@@ -1,0 +1,39 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+.frame {
+    align-items: center;
+    border: 1px none;
+    display: inline-flex;
+    gap: 44px;
+    position: relative;
+    margin-left: 40px;
+}
+
+.frame .div {
+    color: #000000;
+    font-family: "Actor-Regular", Helvetica;
+    font-size: 44px;
+    font-weight: 400;
+    letter-spacing: 2.2px;
+    line-height: 63.8px;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+}
+
+.frame .text-wrapper {
+    color: #000000;
+    font-family: "Actor-Regular", Helvetica;
+    font-size: 44px;
+    font-weight: 400;
+    letter-spacing: 2.2px;
+    line-height: 63.8px;
+}
+
+.frame .span {
+    font-size: 22px;
+    letter-spacing: 1.1px;
+    line-height: 31.9px;
+}

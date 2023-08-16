@@ -28,7 +28,7 @@ router.post('/populate', async (req, res) => {
 
 router.post('/predict', async (req, res) => {
     const { bust, waist, hip } = req.body;
-
+    console.log(req.body);
     try {
         const sizes = await WomenSizeChart.find().sort({ bust: 1, waist: 1, hip: 1 });
         const matchedSize = sizes.find(size => 
@@ -40,6 +40,7 @@ router.post('/predict', async (req, res) => {
         } else {
             res.json({ size: 'Size not found' });
         }
+        console.log(matchedSize);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
