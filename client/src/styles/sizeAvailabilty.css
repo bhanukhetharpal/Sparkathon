@@ -2,20 +2,43 @@
 .size-availability-section {
     padding: 20px;
     background-color: #f7f7f7;
+    font-weight: 300; /* Adjust the font weight (300 is lighter) */
+    font-family: "Actor-Regular", Helvetica;
+
 }
 
 .size-availability-container {
     max-width: 400px;
+    font-family: "Actor-Regular", Helvetica;
     margin: 0 auto;
     padding: 20px;
+    font-weight: 100; /* Adjust the font weight (300 is lighter) */
+
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.spacing {
+  margin-bottom: 20px; /* Adjust the value as needed for spacing */
+}
+
+.spacing2{
+    margin-bottom: 10px; /* Adjust the value as needed for spacing */
+  }
+
+
 .size-availability-title {
     font-size: 24px;
     margin-bottom: 20px;
+    font-weight: 300; /* Adjust the font weight (300 is lighter) */
+
+}
+
+.size-availability-content{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 300;
 }
 
 /* Style for form inputs and labels */
@@ -23,6 +46,8 @@ form label {
     display: block;
     font-size: 16px;
     margin-bottom: 6px;
+    font-weight: 300; /* Adjust the font weight (300 is lighter) */
+
 }
 
 form input {
