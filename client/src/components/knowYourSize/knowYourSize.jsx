@@ -10,6 +10,7 @@ const KnowYourSize = ({ id }) => {
   const [neck, setNeck] = useState("");
   const [sleeve, setSleeve] = useState("");
   const [predictedSize, setPredictedSize] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleGenderChange = (event) => {
     setGender(event.target.value);
@@ -18,28 +19,32 @@ const KnowYourSize = ({ id }) => {
   const handleSubmit = async () => {
     try {
       let apiname = "";
-      let data = "";
-      if (gender == female) {
+      let data = null;
+      if (gender === "female") {
         apiname = "women-size-chart";
         data = { bust, waist, hip };
+        console.log(data);
       } else {
         apiname = "men-size-chart";
         data = { chest, waist, neck, sleeve };
+        console.log(data);
       }
 
       // Make an API request to the backend
-      const response = await fetch("/api/" + apiname + "/predict", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
+      const response = await fetch(
+        `http://localhost:5000/api/${apiname}/predict`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+        console.log("Request sent for", JSON.stringify(data));
       const responseData = await response.json();
-
       // Set the predicted size in state
-      setPredictedSize(responseData.predictedSize);
+      setPredictedSize(responseData.size);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -64,19 +69,43 @@ const KnowYourSize = ({ id }) => {
             <input
               type="text"
               value={bust}
-              onChange={(e) => setBust(e.target.value)}
+              onChange={(e) => {
+                const value = parseFloat(e.target.value);
+                if (!isNaN(value)) {
+                  setBust(value);
+                } else {
+                  setBust(""); // Clear the value
+                }
+              }}
+              placeholder="Enter measurements in inches.."
             />
             <label>Waist:</label>
             <input
               type="text"
               value={waist}
-              onChange={(e) => setWaist(e.target.value)}
+              onChange={(e) => {
+                const value = parseFloat(e.target.value);
+                if (!isNaN(value)) {
+                  setWaist(value);
+                } else {
+                  setWaist(""); // Clear the value
+                }
+              }}
+              placeholder="Enter measurements in inches.."
             />
             <label>Hip:</label>
             <input
               type="text"
               value={hip}
-              onChange={(e) => setHip(e.target.value)}
+              onChange={(e) => {
+                const value = parseFloat(e.target.value);
+                if (!isNaN(value)) {
+                  setHip(value);
+                } else {
+                  setHip(""); // Clear the value
+                }
+              }}
+              placeholder="Enter measurements in inches.."
             />
           </div>
         )}
@@ -87,30 +116,65 @@ const KnowYourSize = ({ id }) => {
             <input
               type="text"
               value={chest}
-              onChange={(e) => setChest(e.target.value)}
+              onChange={(e) => {
+                const value = parseFloat(e.target.value);
+                if (!isNaN(value)) {
+                  setChest(value);
+                } else {
+                  setChest(""); // Clear the value
+                }
+              }}
+              placeholder="Enter measurements in inches.."
             />
             <label>Waist:</label>
             <input
               type="text"
               value={waist}
-              onChange={(e) => setWaist(e.target.value)}
+              onChange={(e) => {
+                const value = parseFloat(e.target.value);
+                if (!isNaN(value)) {
+                  setWaist(value);
+                } else {
+                  setWaist(""); // Clear the value
+                }
+              }}
+              placeholder="Enter measurements in inches.."
             />
             <label>Neck:</label>
             <input
               type="text"
               value={neck}
-              onChange={(e) => setNeck(e.target.value)}
+              onChange={(e) => {
+                const value = parseFloat(e.target.value);
+                if (!isNaN(value)) {
+                  setNeck(value);
+                } else {
+                  setNeck(""); // Clear the value
+                }
+              }}
+              placeholder="Enter measurements in inches.."
             />
             <label>Sleeve:</label>
             <input
               type="text"
               value={sleeve}
-              onChange={(e) => setSleeve(e.target.value)}
+              onChange={(e) => {
+                const value = parseFloat(e.target.value);
+                if (!isNaN(value)) {
+                  setSleeve(value);
+                } else {
+                  setSleeve(""); // Clear the value
+                }
+              }}
+              placeholder="Enter measurements in inches.."
             />
           </div>
         )}
       </div>
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleSubmit} disabled={!gender}>
+        Submit
+      </button>
+      {errorMessage && <p>{errorMessage}</p>}
       {predictedSize && <p>Predicted Size: {predictedSize}</p>}
     </section>
   );
