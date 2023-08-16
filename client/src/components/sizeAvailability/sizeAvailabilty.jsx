@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Delivery = () => {
+const SizeAvailabilty = ({id}) => {
 
     //setting up variables
   const [productID, setProductID] = useState('');
@@ -42,8 +42,9 @@ const Delivery = () => {
   };
 
   return (
+    <section id = {id}>    
     <div>
-      <h1>Product Availability</h1>
+      <h1>Check the Product's Size Availability</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Product ID:
@@ -70,7 +71,8 @@ const Delivery = () => {
         <button type="submit">Submit</button>
       </form>
     </div>
+    </section>
   );
 };
 
-export default Delivery;
+export default SizeAvailabilty;
