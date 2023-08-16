@@ -1,19 +1,17 @@
-import React from 'react';
-import MyButton from './components/sizeRecommender/button.js'
-import OutfitRecommenderButton from './components/outfitRecommender/outfitRecommendations.jsx';
-import Delivery from './components/outfitRecommender/outfit_delivery.jsx';
+import React from "react";
+import OutfitRecommenderButton from "./components/outfitRecommender/outfitRecommendations.jsx";
+import Header from "./components/header.jsx";
+import TitlePage from "./components/titlePage/titlePage.jsx";
+import KnowYourSize from "./components/knowYourSize/knowYourSize.jsx";
+import WhatsHot from "./components/whatsHot/whatsHot.jsx";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Walmart In-Store Experience</h1>
-      </header>
-      <body>
-      <OutfitRecommenderButton />
-
-      <Delivery/>
-      </body>
-      
+      <Header />
+      <TitlePage id="title" />
+      <WhatsHot id="whats-hot" />
+      <KnowYourSize id="know-your-size" />
+      <OutfitRecommenderButton id="outfit-recommender" />
     </div>
   );
 }
@@ -21,15 +19,3 @@ function App() {
 
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
