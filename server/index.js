@@ -2,9 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors')
 require('dotenv').config();
-
+console.log(process.env.DB_URI);
 const app = express();
-
 
 app.use(express.json());
 // Allow requests from a specific origin (your frontend domain)
@@ -14,9 +13,11 @@ app.use(cors({
 
 const womenSizeChartRoutes = require('./routes/womenSizeChart');
 const menSizeChartRoutes = require('./routes/menSizeChart');
+const productRoutes = require('./routes/productRoutes');  
 
 app.use('/api/women-size-chart', womenSizeChartRoutes);
 app.use('/api/men-size-chart', menSizeChartRoutes);
+app.use('/api/products', productRoutes);  
 
 
 const dbURI = 'mongodb+srv://bhanu123:test123@cluster0.5fkumsj.mongodb.net/?retryWrites=true&w=majority';
@@ -30,10 +31,7 @@ app.use((err, req, res, next) => {
     res.status(500).send('Something broke!');
 });
 
-
-
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server started on http://localhost:${PORT}`);
 });
-
