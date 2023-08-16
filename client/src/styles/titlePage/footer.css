@@ -1,39 +1,40 @@
+/* footer.css */
 .footer-container {
     display: flex;
-    flex-direction: column;
-}
-.frame {
-    align-items: center;
-    border: 1px none;
-    display: inline-flex;
-    gap: 44px;
-    position: relative;
-    margin-left: 40px;
-}
-
-.frame .div {
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Add top margin */
+    margin-bottom: 20px; /* Add bottom margin */
+    padding: 20px; /* Add padding for spacing within the footer */
+  }
+  
+  .frame {
+    display: flex;
+    align-items: center; /* Center horizontally */
+    gap: 44px; /* Adjust the horizontal gap between elements */
+  }
+  
+  .frame .div {
     color: #000000;
     font-family: "Actor-Regular", Helvetica;
     font-size: 44px;
     font-weight: 400;
     letter-spacing: 2.2px;
     line-height: 63.8px;
-    margin-top: -1px;
-    position: relative;
-    width: fit-content;
-}
-
-.frame .text-wrapper {
+  }
+  
+  .frame .text-wrapper {
     color: #000000;
     font-family: "Actor-Regular", Helvetica;
     font-size: 44px;
     font-weight: 400;
     letter-spacing: 2.2px;
     line-height: 63.8px;
-}
-
-.frame .span {
+  }
+  
+  .frame .span {
     font-size: 22px;
     letter-spacing: 1.1px;
     line-height: 31.9px;
-}
+  }
+  

@@ -1,3 +1,43 @@
+/* Apply a margin-like line on both sides */
+.margin-container {
+  margin: 0 20px; /* Adjust the margin width as needed */
+  position: relative; /* Ensure the pseudo-element is positioned relative to this container */
+}
+
+/* Pseudo-element for the line effect */
+.margin-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background-color: #000; /* Line color */
+}
+
+/* Pseudo-element for the line effect (right side) */
+.margin-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background-color: #000; /* Line color */
+}
+
+/* Apply uniform padding to the content within the container */
+.margin-container header,
+.margin-container main,
+.margin-container footer {
+  padding: 20px; /* Adjust the padding as needed */
+}
+
+/* App.css */
+.section {
+  margin-bottom: 30px; /* Adjust the value as needed for the desired spacing */
+}
+
 .App {
   text-align: center;
   display: flex;

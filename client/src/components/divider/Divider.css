@@ -1,0 +1,24 @@
+/* Divider.css */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0; /* Adjust the margin to control the spacing */
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #ccc; /* Adjust the color as needed */
+}
+
+.divider::before {
+  margin-right: 10px; /* Adjust the spacing between the line and content */
+}
+
+.divider::after {
+  margin-left: 10px; /* Adjust the spacing between the line and content */
+}
