@@ -34,7 +34,7 @@ import KnowYourSize from "./components/knowYourSize/knowYourSize.jsx";
 import WhatsHot from "./components/whatsHot/whatsHot.jsx";
 import SizeAvailabilty from "./components/sizeAvailability/sizeAvailabilty.jsx";
 import Footer from "./components/Footer.jsx"; 
-
+import Divider from "@mui/material/Divider"
 import "./App.css"; // Import your main CSS file
 
 function App() {
@@ -42,13 +42,13 @@ function App() {
     <div className="App">
       <Header />
       <TitlePage id="title" />
-      <hr /> {/* Use the <hr> tag to create a divider */}
+      <Divider style={{width:'100%'}} /> 
       <WhatsHot id="whats-hot" />
-      <hr />
+      <Divider style={{width:'100%'}} /> 
       <KnowYourSize id="know-your-size" />
-      <hr />
+      <Divider style={{width:'100%'}} /> 
       <OutfitRecommenderButton id="outfit-recommender" />
-      <hr />
+      <Divider style={{width:'100%'}} /> 
       <SizeAvailabilty id="size-availabilty" />
       <Footer />
 
