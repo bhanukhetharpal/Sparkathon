@@ -23,11 +23,9 @@ const KnowYourSize = ({ id }) => {
       if (gender === "female") {
         apiname = "women-size-chart";
         data = { bust, waist, hip };
-        console.log(data);
       } else {
         apiname = "men-size-chart";
         data = { chest, waist, neck, sleeve };
-        console.log(data);
       }
 
       // Make an API request to the backend
@@ -41,7 +39,6 @@ const KnowYourSize = ({ id }) => {
           body: JSON.stringify(data),
         }
       );
-        console.log("Request sent for", JSON.stringify(data));
       const responseData = await response.json();
       // Set the predicted size in state
       setPredictedSize(responseData.size);
