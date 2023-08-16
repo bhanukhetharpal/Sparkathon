@@ -1,6 +1,7 @@
 import React from 'react';
 import MyButton from './components/sizeRecommender/button.js'
 import OutfitRecommenderButton from './components/outfitRecommender/outfitRecommendations.jsx';
+import Delivery from './components/outfitRecommender/outfit_delivery.jsx';
 function App() {
   return (
     <div className="App">
@@ -9,11 +10,15 @@ function App() {
       </header>
       <body>
       <OutfitRecommenderButton />
+
+      <Delivery/>
       </body>
       
     </div>
   );
 }
+
+
 
 export default App;
 
