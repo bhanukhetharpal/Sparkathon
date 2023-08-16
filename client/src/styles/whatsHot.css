@@ -2,18 +2,32 @@
     border: 0px none;
     display: flex;
     align-items: center;
-}
-
-.label .what-s-hot-for-this {
+    justify-content: center; /* Center the content horizontally */
+  }
+  
+  .label .what-s-hot-for-this {
     color: #0a0a0a;
     font-family: "Actor-Regular", Helvetica;
     font-size: 58px;
     font-weight: 400;
     height: 70px;
-    left: 0;
     letter-spacing: 2.9px;
-    line-height: normal;
-    text-align: center;
-    top: 0;
     text-transform: uppercase;
-}
+  }
+  
+  .pinterest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    gap: 20px;
+    justify-content: center; /* Center the grid horizontally */
+    margin: 0 auto; /* Center the grid horizontally and add margin */
+    max-width: 1140px; /* Set a maximum width for the container */
+  }
+  
+  /* Style each iframe */
+  .pinterest-grid iframe {
+    width: 100%; /* Occupy the full width of the grid cell */
+    height: 560px;
+    max-width: 100%; /* Ensure the iframe doesn't exceed the grid cell width */
+  }
+  
