@@ -32,8 +32,8 @@ import Header from "./components/header.jsx";
 import TitlePage from "./components/titlePage/titlePage.jsx";
 import KnowYourSize from "./components/knowYourSize/knowYourSize.jsx";
 import WhatsHot from "./components/whatsHot/whatsHot.jsx";
-import Delivery from "./components/sizeAvailability/sizeAvailabilty.jsx";
-import Footer from "./components/Footer.jsx"; // Import the Footer component
+import SizeAvailabilty from "./components/sizeAvailability/sizeAvailabilty.jsx";
+import Footer from "./components/Footer.jsx"; 
 
 import "./App.css"; // Import your main CSS file
 
@@ -49,7 +49,7 @@ function App() {
       <hr />
       <OutfitRecommenderButton id="outfit-recommender" />
       <hr />
-      <Delivery id="size-availabilty" />
+      <SizeAvailabilty id="size-availabilty" />
       <Footer />
 
     </div>

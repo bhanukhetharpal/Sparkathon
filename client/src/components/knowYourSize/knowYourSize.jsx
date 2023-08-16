@@ -2,13 +2,13 @@ import React, { useState, useEffect} from "react";
 import "../../styles/knowYourSize.css";
 
 const KnowYourSize = ({ id }) => {
-  const [gender, setGender] = useState(""); // State to store selected gender
-  const [bust, setBust] = useState("");
-  const [waist, setWaist] = useState("");
-  const [hip, setHip] = useState("");
-  const [chest, setChest] = useState("");
-  const [neck, setNeck] = useState("");
-  const [sleeve, setSleeve] = useState("");
+  const [gender, setGender] = useState("");
+  const [bust, setBust] = useState(0);
+  const [waist, setWaist] = useState(0);
+  const [hip, setHip] = useState(0);
+  const [chest, setChest] = useState(0);
+  const [neck, setNeck] = useState(0);
+  const [sleeve, setSleeve] = useState(0);
   const [predictedSize, setPredictedSize] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -81,7 +81,7 @@ const KnowYourSize = ({ id }) => {
         setErrorMessage("Please select gender");
         return;
       }
-      if (isInputComplete()) {
+      if (!isInputComplete()) {
         setPredictedSize("");
         setErrorMessage("Please enter all measurement values.");
         return;
