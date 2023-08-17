@@ -32,6 +32,8 @@ Our backstage manager, ensuring everything runs without a hiccup.
 * Size-Me-Up API: Matches your measurements with our sizing charts.
 
 * Available-or-Nah API: Checks if a specific size is in the house.
+  
+For testing and experimentation, refer to the sample barcodes provided in the Testing folder. These samples will help you explore the features of outfit recommendations and check size availability effortlessly.
 
 ## API used for Outfit Recommendations 🎩:
 [Custom Search JSON API](https://developers.google.com/custom-search/v1/overview)
@@ -59,4 +61,5 @@ Follow these steps to get the project up and running:
    - Run `npm start` to start the server.
 
 With these steps completed, your project should be running successfully with the client and server components up and active.
+
   
