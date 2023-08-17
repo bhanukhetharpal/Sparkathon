@@ -37,7 +37,7 @@ For testing and experimentation, refer to the sample barcodes provided in the Te
 
 ## API used for Outfit Recommendations 🎩:
 [Custom Search JSON API](https://developers.google.com/custom-search/v1/overview)
-* Bridging the app and Pinterest, helping us fetch stylish outfit recommendations: On scanning the barcode, we get the product name, adding the term 'outfit' to this, our custom API, integrated with the Custom Search JSON API, forms a query targeted at Pinterest. The result? A digital stylist right in the trial room.
+* Bridging the app and Pinterest, helping us fetch stylish outfit recommendations: On scanning the barcode, our backend fetches the product's description which includes 'name', adding the term 'How to style' to this, our custom API, integrated with the Custom Search JSON API, forms a query targeted at Pinterest. The result? A digital stylist right in the trial room.
 
 ## Getting Started
 To install and run the project on your local system, following are the requirements:
