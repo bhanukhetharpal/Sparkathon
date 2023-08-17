@@ -120,8 +120,9 @@ const KnowYourSize = ({ id }) => {
   return (
     <section id={id}>
       <div className="label">
-        <div className="know-your-size"> Know Your Size </div>
+        <div className="know-your-size">Know Your Size </div>
       </div>
+      <div className="sectionStyle">
       <div className="input-container">
         <label>Gender:</label>
         <select value={gender} onChange={handleGenderChange}>
@@ -194,6 +195,7 @@ const KnowYourSize = ({ id }) => {
       </button>
       {errorMessage && <p>{errorMessage}</p>}
       {predictedSize && <p>Predicted Size: {predictedSize}</p>}
+    </div>
     </section>
   );
 };
