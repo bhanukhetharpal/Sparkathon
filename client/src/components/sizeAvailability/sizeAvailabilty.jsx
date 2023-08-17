@@ -17,6 +17,7 @@ const SizeAvailabilty = ({ id }) => {
   const handleSubmit = () => {
     if (trialRoomNumber) {
       alert("Alert sent to the helper!");
+      setTrialRoomNumber(null);
       return;
     }
     if (email && phoneNumber) {

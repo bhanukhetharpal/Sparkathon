@@ -19,7 +19,7 @@ const BarcodeButton = ({ onScan }) => {
           <BarcodeScanner onScan={handleScan} />
         </div>
       )}
-      {scannedData && <p>Product Id: {scannedData}</p>}
+      {scannedData && <p>{scannedData}</p>}
     </div>
   );
 };
