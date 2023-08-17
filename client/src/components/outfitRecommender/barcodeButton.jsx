@@ -7,9 +7,9 @@ const BarcodeButton = ({ onScan }) => {
   const [scannedData, setScannedData] = useState(null);
 
   const handleScan = (data) => {
-     onScan(data);
-     setScannedData(data);
      setShowScanner(false);
+     setScannedData(data);
+     onScan(data);
   };
 
   return (
