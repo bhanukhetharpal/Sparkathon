@@ -9,15 +9,19 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center; 
+    justify-content: center; /* Add this line */
 }
+
 
 .label .know-your-size {
     color: #0a0a0a;
     font-family: "Actor-Regular", Helvetica;
+    margin-right: 150px;
     font-size: 58px;
     font-weight: 400;
     height: 70px;
-    left: 0;
+    /* left: 0; */
     letter-spacing: 2.9px;
     line-height: normal;
     text-align: center;
@@ -40,6 +44,7 @@
 }
 
 .know-your-size {
+
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;

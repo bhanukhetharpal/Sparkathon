@@ -52,10 +52,13 @@ const SizeAvailabilty = ({ id }) => {
     <section id={id} className="size-availability-section">
       <div className="size-availability-container">
         <h1 className="size-availability-title">Couldn't find your size?</h1>
-        <h2>We are here to help! Scan your product barcode </h2>
+        <h2 className='size-availability-content'>We are here to help! Scan your product barcode </h2>
         <BarcodeButton onScan={handleScan} />
+        <div className="spacing"></div>
         <label>
           Size:
+          <div className="spacing2"></div>
+
           <select value={size} onChange={(e) => setSize(e.target.value)}>
             <option value="">Select Size</option>
             <option value="S">S</option>
