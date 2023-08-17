@@ -3,10 +3,10 @@ import fetchApiData from "../../api/outfitRecommender";
 import LinkComponent from "./linkComponent";
 import "../../styles/outfitRecommenderStyle.css";
 import BarcodeButton from "./barcodeButton";
-
+import fetchProductDetails from "../../api/fetchProductDetails";
 const OutfitRecommenderButton = ({ id }) => {
   const [apiData, setApiData] = useState(null);
-  const [receivedBarcode, setReceivedBarcode] = useState(null);
+  const [receivedBarcode, setReceivedBarcode] = useState("");
   useEffect(() => {
     // Handle fetching data based on receivedBarcode here
     if (receivedBarcode) {
@@ -18,15 +18,26 @@ const OutfitRecommenderButton = ({ id }) => {
     try {
       const data = await fetchApiData(barcode);
       setApiData(data);
-      console.log(data.items);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
-  const handleScan = (barcode) => {
-    setReceivedBarcode(barcode + "outfit");
-  };
+  const handleScan = async (barcode) => {
+  try {
+    const productDetails = await fetchProductDetails(barcode);
+    
+    if (productDetails) {
+      const { name } = productDetails;
+      console.log(name);
+      setReceivedBarcode("how to style "+ name + "pins");
+    } else {
+      console.log("Product not found");
+    }
+  } catch (error) {
+    console.error("Error fetching product details:", error);
+  }
+};
 
   return (
     <section id={id}>

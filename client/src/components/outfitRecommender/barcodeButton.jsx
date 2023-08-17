@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import BarcodeScanner from "../outfitRecommender/barcodeScanner"; // Import the BarcodeScanner component
 import "../../styles/barCodeButton.css";
+import ProductCard from "../productCard/productCard";
 const BarcodeButton = ({ onScan }) => {
   const [showScanner, setShowScanner] = useState(false);
   const [scannedData, setScannedData] = useState(null);
 
   const handleScan = (data) => {
-    setScannedData(data);
-    setShowScanner(false);
-    onScan(data);
+     onScan(data);
+     setScannedData(data);
+     setShowScanner(false);
   };
 
   return (
@@ -19,7 +20,7 @@ const BarcodeButton = ({ onScan }) => {
           <BarcodeScanner onScan={handleScan} />
         </div>
       )}
-      {scannedData && <p>{scannedData}</p>}
+      {scannedData && <ProductCard productId={scannedData}/>}
     </div>
   );
 };

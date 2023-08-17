@@ -31,5 +31,20 @@ router.get('/product-availability/:id/:size', async (req, res) => {
     res.json({ availability: false });
 });
 
-module.exports = router;
+router.get('/product-details/:id', async (req, res) => {
+    const { id } = req.params;
 
+    try {
+        const product = await Product.findOne({ product_id: Number(id) });
+
+        if (product) {
+            return res.json(product);
+        } else {
+            return res.status(404).json({ message: 'Product not found' });
+        }
+    } catch (error) {
+        return res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+module.exports = router;
