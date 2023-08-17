@@ -49,11 +49,13 @@ Follow these steps to get the project up and running:
 2. **Client Setup:**
    - Open a terminal.
    - Navigate to the 'client' directory using the `cd client` command.
+   - Run `npm i` to install the dependencies.
    - Run `npm start` to start the client application.
 
 3. **Server Setup:**
    - Open another terminal window.
    - Navigate to the 'server' directory using the `cd server` command.
+   - Run `npm i` to install the dependencies.
    - Run `npm start` to start the server.
 
 With these steps completed, your project should be running successfully with the client and server components up and active.
